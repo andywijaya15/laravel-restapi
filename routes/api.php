@@ -21,7 +21,7 @@ Route::post('login', LoginController::class);
  * route "/logout"
  * @method "POST"
  */
-Route::post('logout', LogoutController::class);
+Route::middleware('auth:api')->post('logout', LogoutController::class);
 
 /**
  * route "/user"
